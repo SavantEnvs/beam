@@ -1,0 +1,9 @@
+project: savantenvs/beam
+target: fuzz_tx_validate
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_tx_validate/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_tx_validate
+    libfuzzer: true
+    timeout: 30

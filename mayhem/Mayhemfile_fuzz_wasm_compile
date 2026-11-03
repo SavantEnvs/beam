@@ -1,0 +1,9 @@
+project: savantenvs/beam
+target: fuzz_wasm_compile
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_wasm_compile/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_wasm_compile
+    libfuzzer: true
+    timeout: 30
